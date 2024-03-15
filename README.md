@@ -3,7 +3,7 @@ Created this game using the RAYLIB library.
 
 ## Start of the Game
 
-<img width="803" alt="Screen Shot 2024-03-15 at 3 25 35 PM" src="https://github.com/AyoubChraiti/PongGame/assets/135065909/3c3e05b4-5f38-4b71-80dd-f42b55fa0b55">
+<img width="799" alt="Screen Shot 2024-03-15 at 3 44 25 PM" src="https://github.com/AyoubChraiti/PongGame/assets/135065909/c346fb99-336d-4b6a-86ee-eb7f97af0846">
 
 ## Gamplay
 
