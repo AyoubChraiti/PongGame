@@ -13,7 +13,7 @@
 #ifndef HEADER_H
 # define HEADER_H
 
-#include "raylib/src/raylib.h"
+#include "/opt/homebrew/opt/raylib/include/raylib.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

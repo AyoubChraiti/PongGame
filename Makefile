@@ -1,19 +1,24 @@
-NAME = gg
+CC      := cc
+CFLAGS  := #-Wall -Wextra -Werror
 
-CC = cc
+RAYLIB_PREFIX := $(shell brew --prefix raylib)
+INCLUDES := -I$(RAYLIB_PREFIX)/include
+LDFLAGS  := -L$(RAYLIB_PREFIX)/lib -lraylib \
+            -framework CoreVideo -framework IOKit -framework Cocoa -framework OpenGL
 
-INCLUDES = lib/libft.a
+SRC     := $(wildcard *.c)
+OBJ     := $(SRC:.c=.o)
+NAME    := game
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) *.c  -L lib/ -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT \
-		-framework OpenGL lib/libraylib.a -o game
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) $(CFLAGS) $(INCLUDES) $(LDFLAGS) -o $@
 
+clean:
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: clean re all fclean
